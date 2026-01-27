@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
        if (count >= 12)
        {
            winTextObject.SetActive(true);
+           Destroy(GameObject.FindGameObjectWithTag("Enemy"));
        }
    }
     void FixedUpdate(){
@@ -45,4 +46,14 @@ public class PlayerController : MonoBehaviour
         SetCountText();
        }
    }
+   private void OnCollisionEnter(Collision collision)
+{
+   if (collision.gameObject.CompareTag("Enemy"))
+   {
+       // Destroy the current object
+       Destroy(gameObject); 
+       winTextObject.gameObject.SetActive(true);
+       winTextObject.GetComponent<TextMeshProUGUI>().text = "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA";
+   }
+}
 }
