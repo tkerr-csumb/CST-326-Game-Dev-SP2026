@@ -1594,6 +1594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 369647732}
   - component: {fileID: 369647733}
+  - component: {fileID: 369647734}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -1637,6 +1638,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &369647734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369647731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slot
 --- !u!1 &372342256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,6 +3416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673285658}
   - component: {fileID: 673285659}
+  - component: {fileID: 673285660}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -3446,6 +3460,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &673285660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673285657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slot
 --- !u!1 &704160004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4864,6 +4890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1094175136}
   - component: {fileID: 1094175137}
+  - component: {fileID: 1094175138}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -4907,6 +4934,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1094175138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094175135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slot
 --- !u!1 &1158753810
 GameObject:
   m_ObjectHideFlags: 0
@@ -5452,6 +5491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1426595728}
   - component: {fileID: 1426595729}
+  - component: {fileID: 1426595730}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -5495,6 +5535,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1426595730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426595727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slot
 --- !u!1 &1458633571
 GameObject:
   m_ObjectHideFlags: 0
@@ -7630,6 +7682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770792941}
   - component: {fileID: 1770792942}
+  - component: {fileID: 1770792943}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -7673,6 +7726,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1770792943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770792940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slot
 --- !u!1 &1772693533
 GameObject:
   m_ObjectHideFlags: 0
@@ -8479,6 +8544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899842170}
   - component: {fileID: 1899842171}
+  - component: {fileID: 1899842172}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -8522,6 +8588,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1899842172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899842169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slot
 --- !u!1 &1917979645
 GameObject:
   m_ObjectHideFlags: 0
@@ -9029,6 +9107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2038870262}
   - component: {fileID: 2038870263}
+  - component: {fileID: 2038870264}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -9072,6 +9151,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2038870264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038870261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slot
 --- !u!1 &2054633107
 GameObject:
   m_ObjectHideFlags: 0
@@ -9082,6 +9173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054633108}
   - component: {fileID: 2054633109}
+  - component: {fileID: 2054633110}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -9125,6 +9217,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2054633110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054633107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Slot
 --- !u!1 &2084477817
 GameObject:
   m_ObjectHideFlags: 0
