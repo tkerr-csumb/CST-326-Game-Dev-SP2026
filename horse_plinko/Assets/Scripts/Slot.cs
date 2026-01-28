@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
-   void onTriggerEnter(Collider other)
+    public int slotnumber;
+   void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Collided with {other.gameObject.name}");
-        
+        Debug.Log($"Slot #{slotnumber} with {other.gameObject.name}");
+
     }
 }

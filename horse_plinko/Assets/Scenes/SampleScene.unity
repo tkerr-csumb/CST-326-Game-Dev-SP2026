@@ -1650,6 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
+  slotnumber: 4
 --- !u!1 &372342256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,6 +3473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
+  slotnumber: 6
 --- !u!1 &704160004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4946,6 +4948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
+  slotnumber: 8
 --- !u!1 &1158753810
 GameObject:
   m_ObjectHideFlags: 0
@@ -5547,6 +5550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
+  slotnumber: 3
 --- !u!1 &1458633571
 GameObject:
   m_ObjectHideFlags: 0
@@ -7738,6 +7742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
+  slotnumber: 5
 --- !u!1 &1772693533
 GameObject:
   m_ObjectHideFlags: 0
@@ -8600,6 +8605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
+  slotnumber: 2
 --- !u!1 &1917979645
 GameObject:
   m_ObjectHideFlags: 0
@@ -9163,6 +9169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
+  slotnumber: 1
 --- !u!1 &2054633107
 GameObject:
   m_ObjectHideFlags: 0
@@ -9229,6 +9236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66eeab29eb39a5c4cbc398e1433bec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
+  slotnumber: 7
 --- !u!1 &2084477817
 GameObject:
   m_ObjectHideFlags: 0
