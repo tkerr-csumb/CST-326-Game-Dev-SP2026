@@ -8991,6 +8991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallSpawner
   horsePrefab: {fileID: 2104305170026319190, guid: a365b81c529e34842a2842c14e242778, type: 3}
+  spawnerDistance: 1
+  spawnerSpeed: 0.5
 --- !u!1 &2019895328
 GameObject:
   m_ObjectHideFlags: 0
