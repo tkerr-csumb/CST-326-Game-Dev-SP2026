@@ -4,11 +4,11 @@ using UnityEngine.InputSystem;
 public class DemoPaddle : MonoBehaviour
 {
     public float paddleSpeed = 1f;
-    public float forceStrength = 10f;
-    public float maxZ = 5f;
-    public float minZ = -5f;
+    public float maxZ = 6f;
+    public float minZ = -6f;
     private Rigidbody rBody;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public bool isRightPaddle = false;
+    public bool isLeftPaddle = false;
     void Awake()
     {
         rBody = GetComponent<Rigidbody>();
@@ -18,38 +18,37 @@ public class DemoPaddle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    float input;
+
+void Update()
+{
+    input = 0f;
+
+    if (isRightPaddle)
     {
-        if (Keyboard.current.wKey.isPressed)
-        {
-            //Vector3 force = new Vector3(0f, 0f, forceStrength);
-            //rBody.AddForce(force, ForceMode.Force);
-            BoxCollider boxCollider = GetComponent<BoxCollider>();
-            //boxCollider.bounds.
-            Vector3 newPosition = transform.position + new Vector3(0f, 0f, paddleSpeed) * Time.deltaTime;
-            newPosition.z = Mathf.Clamp(newPosition.z, minZ, maxZ);
-            transform.position = newPosition;
-
-            //transform.position += new Vector3(0f, 0f, paddleSpeed) * Time.deltaTime;
-        }
-        if (Keyboard.current.sKey.isPressed)
-        {
-            //Vector3 force = new Vector3(0f, 0f, -forceStrength);
-            //Rigidbody rBody = GetComponent<Rigidbody>();
-            //rBody.AddForce(force, ForceMode.Force);
-            //transform.position -= new Vector3(0f, 0f, paddleSpeed) * Time.deltaTime;
-        }
+        if (Keyboard.current.wKey.isPressed) input = 1f;
+        else if (Keyboard.current.sKey.isPressed) input = -1f;
     }
-    void FixedUpdate(){
-        float angle = 50f;
 
-        //Vector3 up = Vector3.up;
-        //Quaternion testRotation = Quarternion.Euler(60f,0f,0f);
-        //Vector3 rotatedVector = testRotation * up;
-        //Quarternion otherRotation = Quaternion.Euler(-60f,0f,0f);
-        //Vector3 otherRotatedVector = otherRotation * up;
-
-        //Quaternion someOtherAngleRotation = Quaternion.Euler(angle, 0f, 0f);
-        //Vector3 otherRotatedVector = someOtherAngleRotation * up;
+    if (isLeftPaddle)
+    {
+        if (Keyboard.current.oKey.isPressed) input = 1f;
+        else if (Keyboard.current.lKey.isPressed) input = -1f;
     }
+}
+
+void FixedUpdate()
+{
+    if (input == 0f)
+        return;
+
+    BoxCollider box = GetComponent<BoxCollider>();
+    float halfPaddle = box.bounds.extents.z;
+
+    Vector3 newPos = rBody.position;
+    newPos.z += input * paddleSpeed * Time.fixedDeltaTime;
+    newPos.z = Mathf.Clamp(newPos.z, minZ + halfPaddle, maxZ - halfPaddle);
+
+    rBody.MovePosition(newPos);
+}
 }
