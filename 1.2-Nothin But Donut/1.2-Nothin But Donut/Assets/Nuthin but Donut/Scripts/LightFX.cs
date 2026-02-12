@@ -20,7 +20,7 @@ public class LightFX : MonoBehaviour
 
         float t = startTime + Time.timeSinceLevelLoad;
         float n1 = Mathf.PerlinNoise(t,0f);
-        float n1 = Mathf.PerlinNoise(0f,t);
+        float n2 = Mathf.PerlinNoise(0f,t);
 
         //Debug.Log(n1)
 

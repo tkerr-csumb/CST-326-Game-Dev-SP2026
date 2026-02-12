@@ -18,7 +18,7 @@ public class Ball : MonoBehaviour
         Debug.Log($"I hit the {collision.collider.name}");
         if (collision.gameObject.CompareTag("Trampoline"))
             audioSource.PlayOneShot(trampolineCollision);
-        
-        // Todo - add a tag for the rim and play a sound in response
+        if (collision.gameObject.CompareTag("Rim"))
+            audioSource.PlayOneShot(rimCollision);
     }
 }
