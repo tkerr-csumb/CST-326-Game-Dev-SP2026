@@ -13,10 +13,11 @@ public class CharacterDriver : MonoBehaviour
     CharacterController _controller;
     Quaternion facingRight;
     Quaternion facingLeft;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start(){
-        facingRight = Quaternion.identity;
-        facingLeft = Quaternion.Euler(0f, 180f, 0f);
+    Animator _animator;
+    void Awake(){
+        _animator = GetComponent<Animator>();
+        facingRight = Quaternion.Euler(0f, 90f, 0f);
+        facingLeft = Quaternion.Euler(0f, 270f, 0f);
         _controller = GetComponent<CharacterController>();
     }
 
@@ -61,5 +62,8 @@ public class CharacterDriver : MonoBehaviour
 
         if ((collisions & CollisionFlags.CollidedSides) != 0)
             _velocity.x = 0f;
+
+        _animator.SetFloat("Speed", Mathf.Abs(_velocity.x));
+        _animator.SetBool("Grounded", _controller.isGrounded);
     }
 }
