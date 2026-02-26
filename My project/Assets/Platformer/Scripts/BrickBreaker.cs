@@ -3,6 +3,6 @@ using UnityEngine;
 public class BrickBreaker : MonoBehaviour
 {
     public void Break(){
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }
