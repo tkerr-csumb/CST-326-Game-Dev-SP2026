@@ -5,28 +5,24 @@ public class Enemy : MonoBehaviour
     public delegate void EnemyDiedFunc(float points);
     public static event EnemyDiedFunc OnEnemyDied;
 
-    public AudioClip tacClip;
-    public AudioClip ticClip;
+    [Header("Enemy Settings")]
+    public float scoreValue = 10f;
+    private AudioSource audioSource;
+
+    public void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Ouch!");
         
         // todo - destroy the bullet
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet Layer")){
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player Bullet Layer")){
             Destroy(collision.gameObject);
-            Destroy(gameObject);
             OnEnemyDied.Invoke(10);
+            Destroy(gameObject);
         }
         // todo - trigger death animation
-    }
-
-    public void PlayTicSound()
-    {
-        GetComponent<AudioSource>().PlayOneShot(ticClip);
-    }
-
-    public void PlayTacSound()
-    {
-        GetComponent<AudioSource>().PlayOneShot(tacClip);
     }
 }

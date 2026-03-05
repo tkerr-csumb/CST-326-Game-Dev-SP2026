@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6981147565152053978}
   - component: {fileID: 8577462963869970575}
   - component: {fileID: -927248358726359765}
-  m_Layer: 6
-  m_Name: Bullet
+  m_Layer: 7
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2457785739244962049}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.07765027, y: 0.5868, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.0582377, y: 0.44009998, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &2690904134826729774
 MeshFilter:
   m_ObjectHideFlags: 0
