@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -20,10 +21,16 @@ public class EnemyManager : MonoBehaviour
     public GameObject bulletPrefab;
     public float shootInterval = 2f;
     public float bulletSpeed = 5f;
+    public AudioClip hahah;
+    private AudioSource pewpers;
 
     private List<Enemy> enemies = new List<Enemy>();
     private Vector3 startPos;
 
+    public void Awake()
+    {
+        pewpers = GetComponent<AudioSource>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
         startPos = transform.position;
@@ -56,7 +63,10 @@ public class EnemyManager : MonoBehaviour
 
         while (enemies.Count > 0) {
             enemies.RemoveAll(e => e == null);
-            if (enemies.Count == 0) yield break;
+            if (enemies.Count == 0){
+                SceneManager.LoadScene("Credits");
+                yield break;
+            }
 
             float squadLeft = float.MaxValue;
             float squadRight = float.MinValue;
@@ -97,6 +107,7 @@ public class EnemyManager : MonoBehaviour
             List<Enemy> quickDraw = new List<Enemy>(bottomEnemies.Values);
             Enemy shooter = quickDraw[Random.Range(0, quickDraw.Count)];
             ShootFrom(shooter);
+            pewpers.PlayOneShot(hahah);
         }
     }
 

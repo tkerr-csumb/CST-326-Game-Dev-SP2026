@@ -6,18 +6,27 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI hiscoreText;
-
+    [Header("Audio")]
+    public AudioSource musicSource;
+    public AudioClip musicTrack;
+    public AudioClip deathSound;
     private int score = 0;
     private int hiscore = 0;
     private const int maxscore = 9999;
     private const string HiScoreKey = "HISCORE";
     void Start()
     {
-       // todo - sign up for notification about enemy death 
        Enemy.OnEnemyDied += OnEnemyDied;
        hiscore = PlayerPrefs.GetInt(HiScoreKey,0);
        UpdateScoreText();
        UpdateHiScoreText();
+
+       if (musicSource != null && musicTrack != null)
+        {
+            musicSource.clip = musicTrack;
+            musicSource.loop = true;
+            musicSource.Play();
+        }
     }
 
     void onDestroy()
@@ -27,6 +36,10 @@ public class GameManager : MonoBehaviour
 
     void OnEnemyDied(float score)
     {
+        if (deathSound != null && musicSource != null)
+        {
+            musicSource.PlayOneShot(deathSound);
+        }
         Debug.Log($"Killed enemy worth {score} points");
         AddScore(score);
     }

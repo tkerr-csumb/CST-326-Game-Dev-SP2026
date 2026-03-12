@@ -17,12 +17,10 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Ouch!");
         
-        // todo - destroy the bullet
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player Bullet Layer")){
             Destroy(collision.gameObject);
-            OnEnemyDied.Invoke(10);
+            OnEnemyDied.Invoke(scoreValue);
             Destroy(gameObject);
         }
-        // todo - trigger death animation
     }
 }
