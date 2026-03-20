@@ -78,9 +78,10 @@ public class NetworkClient : MonoBehaviour
         var displayName = senderParts.Length > 1 ? senderParts[1] : id;
 
         // Game controller messages
-        if (id == "GAME")
+        if (msg.StartsWith("GAME:"))
         {
-            if (gameManager != null) gameManager.OnGameMessage(payload);
+            string gamepayload = msg.Substring(5); // everything after "GAME:"
+            if (gameManager != null) gameManager.OnGameMessage(gamepayload);
             return;
         }
 
